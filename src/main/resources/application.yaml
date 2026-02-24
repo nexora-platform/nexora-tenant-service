@@ -3,8 +3,7 @@ server:
 
 spring:
   application:
-    name: tenant-service
-
+    name: nexora-tenant-service
 
   datasource:
     url: jdbc:postgresql://localhost:5433/nexora_tenant_db
@@ -18,8 +17,14 @@ spring:
     properties:
       hibernate:
         format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+  instance:
+    prefer-ip-address: true
