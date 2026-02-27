@@ -6,7 +6,7 @@ spring:
     name: nexora-tenant-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/nexora_tenant_db
+    url: jdbc:postgresql://localhost:5433/nexora_auth
     username: postgres
     password: postgres
 
